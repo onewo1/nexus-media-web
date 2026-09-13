@@ -128,16 +128,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Send Telegram Notification
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          format: html
-          message: |
-            <b>Nexus Media Web ${{ steps.extract.outputs.tag }} 已发布</b>
 
-            <pre>${{ steps.extract.outputs.notes }}</pre>
 
             📦 Docker: <code>docker pull linyuan0213/nexus-media-web:${{ steps.extract.outputs.version }}</code>
             🔗 <a href="https://github.com/${{ github.repository }}/releases/tag/${{ steps.extract.outputs.tag }}">查看 Release</a>
