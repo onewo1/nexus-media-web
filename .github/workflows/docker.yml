@@ -130,5 +130,4 @@ jobs:
 
 
 
-            📦 Docker: <code>docker pull linyuan0213/nexus-media-web:${{ steps.extract.outputs.version }}</code>
-            🔗 <a href="https://github.com/${{ github.repository }}/releases/tag/${{ steps.extract.outputs.tag }}">查看 Release</a>
+
